@@ -1,0 +1,106 @@
+  <!doctype html>
+  <html>
+    <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
+      <meta name="format-detection"content="telephone=no">
+      <link rel="stylesheet" href="http://hn.qq.com/tangjian/css/h5frame/tjFrame_v0.0.1.css?_150602">
+      <title>彩虹学院</title>
+      <style>
+      /* 默认背景图 */
+      .layout{background-image: url(http://usr.im/480x772?text=默认背景);} 
+      .layout .itemShare p{color: #000;} 
+      /*分享按钮*/
+      #tjBtnShare{background-image: url(http://mat1.gtimg.com/hn/tangjian/images/zt_mojing/btnShare.png);} 
+      </style>
+      
+    </head>
+    <body>
+      <div class="load" style="display: block;">
+        <div class="loadImg">
+          <div class="load1">
+            <div class="rect1"></div>
+            <div class="rect2"></div>
+            <div class="rect3"></div>
+            <div class="rect4"></div>
+            <div class="rect5"></div>
+          </div>
+          <div class="loadTxt">loading..</div>
+        </div>
+      </div>
+      
+      <div class="global">
+        <div class="screen">
+
+
+          <!-- page 1 /S -->
+          <div class="layout">
+            <div class="inner">
+              <div class="item item1 fadeInDown">                
+                <img src="images/a01.jpg" alt="">
+              </div>
+              <div class="item item1 fadeInDown">                
+                <img src="images/a01.jpg" alt="">
+              </div>
+              <div class="swipeTip"></div>
+            </div>
+          </div>
+          <!-- page 1 /E -->
+
+
+
+
+          <!-- page other -->
+          <!-- 此P应大神要求，为分享页,不需要可以删除-->
+          <div class="layout">
+            <div class="inner">
+              <div class="itemShare">
+                <!-- 二维码图片 -->
+                <img src="http://mat1.gtimg.com/hn/tangjian/images/zt_mojing/yecs.jpg" style="width: 55%; margin: 40px auto; display: block;" alt="">
+              </div>
+              <div class="itemShare">
+                <!-- 文字这里修改 -->
+                <p>文字文字文字文字文字</p>
+                <p>文字文字文字文字文字</p>
+                <p>文字文字文字文字文字</p>
+              </div>
+              <!-- 分享按钮，是否要需要修改分享按钮的样式？分享按钮图片修改代码顶部 -->
+              <a id="tjBtnShare"></a>
+              <div class="swipeTip"></div>
+            </div>
+          </div>
+          <!-- 分享页结束 -->
+
+
+
+        </div> <!-- end screen -->
+      </div> <!-- end global -->
+      <div class="weixin_layout"></div>
+      <audio id="b12-bgm" src="http://mat1.gtimg.com/hn/tangjian/images/zt_sdjq/msudu.mp3" loop autoplay></audio>
+      <div id="b12-audio-ctrl" class="b12-audio-ctrl"></div>
+      <div class="share"></div>
+      <script type="text/javascript" src="http://mat1.gtimg.com/www/mobi/js/zepto.min.js"></script>
+      <script type="text/javascript" src="http://mat1.gtimg.com/joke/and/js/touch.js"></script>
+      <script type="text/javascript" src="http://hn.qq.com/tangjian/_sx/chenxiang/js/WXshareAndPgv.js"></script>
+      <script type="text/javascript" src="http://hn.qq.com/tangjian/scripts/h5frame/tjFrame_v0.0.1.js"></script>
+      <script>
+        window.addEventListener('load', function() {
+          $(".load").css({display: "none"});
+          layout.init();
+
+          $('#tjBtnShare').on('tap', function(){
+            $('.share').show().on('tap', function(){
+              $('.share').hide();
+            })
+          });
+        }, false);
+
+        //分享
+        var shareImg = 'http://mat1.gtimg.com/hn/tangjian/_sx/chenxiang/h5/xxx/weixin.jpg';/*分享图链接,建议尺寸120x120*/
+        var shareTitle = '彩虹学院';//分享标题
+        var shareDesc = '彩虹学院隆重上线';//分享描述
+        var shareLink = window.location.href;
+      </script>
+    </body>
+    </html>
